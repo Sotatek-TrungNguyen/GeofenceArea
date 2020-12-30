@@ -14,6 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        application.setupTheme()
         window = UIWindow(frame: UIScreen.main.bounds)
         App.shared.switchRoot(type: .mapview)
         return true
@@ -24,5 +25,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func applicationWillEnterForeground(_ application: UIApplication) {
     }
+}
+
+extension UIApplication {
+    
+    func setupTheme() {
+        
+    }
+    
 }
 

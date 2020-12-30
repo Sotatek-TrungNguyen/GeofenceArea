@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		103BE8E7259CDD5600487748 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103BE8E6259CDD5600487748 /* Reachability.swift */; };
+		10BD19C1259C64AC0042B1AF /* MapView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BD19C0259C64AC0042B1AF /* MapView+Extensions.swift */; };
+		10BD19C6259C6B8C0042B1AF /* EditGeofenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BD19C4259C6B8C0042B1AF /* EditGeofenceViewController.swift */; };
+		10BD19C7259C6B8C0042B1AF /* EditGeofenceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10BD19C5259C6B8C0042B1AF /* EditGeofenceViewController.xib */; };
+		10BD19C9259C6F7B0042B1AF /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BD19C8259C6F7B0042B1AF /* UIViewController+Extensions.swift */; };
+		10BD19CE259C961F0042B1AF /* GeofenceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BD19CD259C961F0042B1AF /* GeofenceModel.swift */; };
 		10EB83C3259C1AF800B81E07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EB83C2259C1AF800B81E07 /* AppDelegate.swift */; };
 		10EB83CC259C1AFD00B81E07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10EB83CB259C1AFD00B81E07 /* Assets.xcassets */; };
 		10EB83CF259C1AFD00B81E07 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10EB83CD259C1AFD00B81E07 /* LaunchScreen.storyboard */; };
@@ -14,6 +20,9 @@
 		10EB83E7259C1CCF00B81E07 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EB83E6259C1CCF00B81E07 /* App.swift */; };
 		10EB83EC259C243900B81E07 /* GeofenceAreaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EB83EA259C243900B81E07 /* GeofenceAreaViewController.swift */; };
 		10EB83ED259C243900B81E07 /* GeofenceAreaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10EB83EB259C243900B81E07 /* GeofenceAreaViewController.xib */; };
+		10EB83EF259C2BE000B81E07 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EB83EE259C2BE000B81E07 /* Constant.swift */; };
+		10EB83F1259C2DBA00B81E07 /* GANavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EB83F0259C2DBA00B81E07 /* GANavigationViewController.swift */; };
+		10EB83F4259C3D8800B81E07 /* CLAuthorizationStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EB83F3259C3D8800B81E07 /* CLAuthorizationStatus.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +36,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		103BE8E6259CDD5600487748 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		10BD19C0259C64AC0042B1AF /* MapView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapView+Extensions.swift"; sourceTree = "<group>"; };
+		10BD19C4259C6B8C0042B1AF /* EditGeofenceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditGeofenceViewController.swift; sourceTree = "<group>"; };
+		10BD19C5259C6B8C0042B1AF /* EditGeofenceViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditGeofenceViewController.xib; sourceTree = "<group>"; };
+		10BD19C8259C6F7B0042B1AF /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
+		10BD19CD259C961F0042B1AF /* GeofenceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeofenceModel.swift; sourceTree = "<group>"; };
 		10EB83BF259C1AF800B81E07 /* GeofenceArea.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeofenceArea.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10EB83C2259C1AF800B81E07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		10EB83CB259C1AFD00B81E07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -38,6 +53,9 @@
 		10EB83E6259C1CCF00B81E07 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		10EB83EA259C243900B81E07 /* GeofenceAreaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeofenceAreaViewController.swift; sourceTree = "<group>"; };
 		10EB83EB259C243900B81E07 /* GeofenceAreaViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GeofenceAreaViewController.xib; sourceTree = "<group>"; };
+		10EB83EE259C2BE000B81E07 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		10EB83F0259C2DBA00B81E07 /* GANavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GANavigationViewController.swift; sourceTree = "<group>"; };
+		10EB83F3259C3D8800B81E07 /* CLAuthorizationStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLAuthorizationStatus.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +76,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		103BE8E4259CDD2400487748 /* Libs */ = {
+			isa = PBXGroup;
+			children = (
+				103BE8E5259CDD3700487748 /* ReachabilitySwift */,
+			);
+			path = Libs;
+			sourceTree = "<group>";
+		};
+		103BE8E5259CDD3700487748 /* ReachabilitySwift */ = {
+			isa = PBXGroup;
+			children = (
+				103BE8E6259CDD5600487748 /* Reachability.swift */,
+			);
+			path = ReachabilitySwift;
+			sourceTree = "<group>";
+		};
+		10BD19C2259C6A530042B1AF /* GeofenceArea */ = {
+			isa = PBXGroup;
+			children = (
+				10EB83EA259C243900B81E07 /* GeofenceAreaViewController.swift */,
+				10EB83EB259C243900B81E07 /* GeofenceAreaViewController.xib */,
+			);
+			path = GeofenceArea;
+			sourceTree = "<group>";
+		};
+		10BD19C3259C6A6D0042B1AF /* EditGeofence */ = {
+			isa = PBXGroup;
+			children = (
+				10BD19C4259C6B8C0042B1AF /* EditGeofenceViewController.swift */,
+				10BD19C5259C6B8C0042B1AF /* EditGeofenceViewController.xib */,
+			);
+			path = EditGeofence;
+			sourceTree = "<group>";
+		};
+		10BD19CA259C82450042B1AF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				10BD19CD259C961F0042B1AF /* GeofenceModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		10EB83B6259C1AF800B81E07 = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +171,7 @@
 			children = (
 				10EB83C2259C1AF800B81E07 /* AppDelegate.swift */,
 				10EB83E6259C1CCF00B81E07 /* App.swift */,
+				10EB83F0259C2DBA00B81E07 /* GANavigationViewController.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -118,6 +179,9 @@
 		10EB83E8259C239D00B81E07 /* General */ = {
 			isa = PBXGroup;
 			children = (
+				10EB83EE259C2BE000B81E07 /* Constant.swift */,
+				103BE8E4259CDD2400487748 /* Libs */,
+				10EB83F2259C3D6300B81E07 /* Extensions */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -125,10 +189,21 @@
 		10EB83E9259C23D300B81E07 /* ModuleMap */ = {
 			isa = PBXGroup;
 			children = (
-				10EB83EA259C243900B81E07 /* GeofenceAreaViewController.swift */,
-				10EB83EB259C243900B81E07 /* GeofenceAreaViewController.xib */,
+				10BD19CA259C82450042B1AF /* Model */,
+				10BD19C3259C6A6D0042B1AF /* EditGeofence */,
+				10BD19C2259C6A530042B1AF /* GeofenceArea */,
 			);
 			path = ModuleMap;
+			sourceTree = "<group>";
+		};
+		10EB83F2259C3D6300B81E07 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				10EB83F3259C3D8800B81E07 /* CLAuthorizationStatus.swift */,
+				10BD19C0259C64AC0042B1AF /* MapView+Extensions.swift */,
+				10BD19C8259C6F7B0042B1AF /* UIViewController+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,6 +287,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10BD19C7259C6B8C0042B1AF /* EditGeofenceViewController.xib in Resources */,
 				10EB83ED259C243900B81E07 /* GeofenceAreaViewController.xib in Resources */,
 				10EB83CF259C1AFD00B81E07 /* LaunchScreen.storyboard in Resources */,
 				10EB83CC259C1AFD00B81E07 /* Assets.xcassets in Resources */,
@@ -232,9 +308,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10BD19C6259C6B8C0042B1AF /* EditGeofenceViewController.swift in Sources */,
 				10EB83E7259C1CCF00B81E07 /* App.swift in Sources */,
+				10EB83F1259C2DBA00B81E07 /* GANavigationViewController.swift in Sources */,
 				10EB83C3259C1AF800B81E07 /* AppDelegate.swift in Sources */,
+				10BD19C9259C6F7B0042B1AF /* UIViewController+Extensions.swift in Sources */,
+				10BD19CE259C961F0042B1AF /* GeofenceModel.swift in Sources */,
 				10EB83EC259C243900B81E07 /* GeofenceAreaViewController.swift in Sources */,
+				103BE8E7259CDD5600487748 /* Reachability.swift in Sources */,
+				10EB83F4259C3D8800B81E07 /* CLAuthorizationStatus.swift in Sources */,
+				10EB83EF259C2BE000B81E07 /* Constant.swift in Sources */,
+				10BD19C1259C64AC0042B1AF /* MapView+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -387,6 +471,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PCXJ6TD5GN;
 				INFOPLIST_FILE = GeofenceArea/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -405,6 +490,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PCXJ6TD5GN;
 				INFOPLIST_FILE = GeofenceArea/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (

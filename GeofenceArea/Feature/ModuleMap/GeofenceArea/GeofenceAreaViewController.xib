@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GeofenceAreaViewController" customModule="GeofenceArea" customModuleProvider="target">
+            <connections>
+                <outlet property="mapView" destination="Ypk-oI-vWH" id="bhf-ex-bCI"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iZp-GD-tZR" userLabel="ContentView">
+                    <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                    <subviews>
+                        <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" pitchEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ypk-oI-vWH">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="852"/>
+                            <color key="tintColor" name="mainColor"/>
+                        </mapView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="Ypk-oI-vWH" secondAttribute="bottom" id="Cj9-fJ-Ruv"/>
+                        <constraint firstItem="Ypk-oI-vWH" firstAttribute="leading" secondItem="iZp-GD-tZR" secondAttribute="leading" id="Ggj-A8-KnV"/>
+                        <constraint firstAttribute="trailing" secondItem="Ypk-oI-vWH" secondAttribute="trailing" id="KRm-0H-WgR"/>
+                        <constraint firstItem="Ypk-oI-vWH" firstAttribute="top" secondItem="iZp-GD-tZR" secondAttribute="top" id="pTa-mY-Y13"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="iZp-GD-tZR" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Cog-PP-QcC"/>
+                <constraint firstItem="iZp-GD-tZR" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="P7J-Wz-ZAx"/>
+                <constraint firstAttribute="bottom" secondItem="iZp-GD-tZR" secondAttribute="bottom" id="YYg-BC-nYg"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="iZp-GD-tZR" secondAttribute="trailing" id="nlX-Oi-awB"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="132" y="147"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="mainColor">
+            <color red="0.0" green="0.49803921568627452" blue="0.86274509803921573" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

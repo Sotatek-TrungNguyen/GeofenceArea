@@ -67,8 +67,8 @@ extension App {
     private func viewController(type: RootType) -> UIViewController {
         switch type {
         case .mapview:
-            let nav = UINavigationController(rootViewController: GeofenceAreaViewController())
-            nav.setNavigationBarHidden(true, animated: false)
+            let nav = GANavigationViewController(rootViewController: GeofenceAreaViewController())
+            nav.setNavigationBarHidden(false, animated: false)
             return nav
         }
     }
