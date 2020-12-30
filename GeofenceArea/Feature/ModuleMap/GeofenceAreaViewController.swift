@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  GeofenceAreaViewController.swift
 //  GeofenceArea
 //
 //  Created by Nguyen Thanh Trung on 12/30/20.
@@ -8,13 +8,9 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class GeofenceAreaViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
-
-
 }
-

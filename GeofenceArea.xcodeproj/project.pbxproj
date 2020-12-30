@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		10EB83C3259C1AF800B81E07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EB83C2259C1AF800B81E07 /* AppDelegate.swift */; };
-		10EB83C5259C1AF800B81E07 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EB83C4259C1AF800B81E07 /* SceneDelegate.swift */; };
-		10EB83C7259C1AF800B81E07 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EB83C6259C1AF800B81E07 /* ViewController.swift */; };
-		10EB83CA259C1AF800B81E07 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10EB83C8259C1AF800B81E07 /* Main.storyboard */; };
 		10EB83CC259C1AFD00B81E07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10EB83CB259C1AFD00B81E07 /* Assets.xcassets */; };
 		10EB83CF259C1AFD00B81E07 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10EB83CD259C1AFD00B81E07 /* LaunchScreen.storyboard */; };
 		10EB83DA259C1AFD00B81E07 /* GeofenceAreaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EB83D9259C1AFD00B81E07 /* GeofenceAreaTests.swift */; };
+		10EB83E7259C1CCF00B81E07 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EB83E6259C1CCF00B81E07 /* App.swift */; };
+		10EB83EC259C243900B81E07 /* GeofenceAreaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EB83EA259C243900B81E07 /* GeofenceAreaViewController.swift */; };
+		10EB83ED259C243900B81E07 /* GeofenceAreaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10EB83EB259C243900B81E07 /* GeofenceAreaViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,15 +29,15 @@
 /* Begin PBXFileReference section */
 		10EB83BF259C1AF800B81E07 /* GeofenceArea.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeofenceArea.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10EB83C2259C1AF800B81E07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		10EB83C4259C1AF800B81E07 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		10EB83C6259C1AF800B81E07 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		10EB83C9259C1AF800B81E07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		10EB83CB259C1AFD00B81E07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		10EB83CE259C1AFD00B81E07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		10EB83D0259C1AFD00B81E07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		10EB83D5259C1AFD00B81E07 /* GeofenceAreaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GeofenceAreaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		10EB83D9259C1AFD00B81E07 /* GeofenceAreaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeofenceAreaTests.swift; sourceTree = "<group>"; };
 		10EB83DB259C1AFD00B81E07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		10EB83E6259C1CCF00B81E07 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+		10EB83EA259C243900B81E07 /* GeofenceAreaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeofenceAreaViewController.swift; sourceTree = "<group>"; };
+		10EB83EB259C243900B81E07 /* GeofenceAreaViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GeofenceAreaViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,10 +79,8 @@
 		10EB83C1259C1AF800B81E07 /* GeofenceArea */ = {
 			isa = PBXGroup;
 			children = (
-				10EB83C2259C1AF800B81E07 /* AppDelegate.swift */,
-				10EB83C4259C1AF800B81E07 /* SceneDelegate.swift */,
-				10EB83C6259C1AF800B81E07 /* ViewController.swift */,
-				10EB83C8259C1AF800B81E07 /* Main.storyboard */,
+				10EB83E8259C239D00B81E07 /* General */,
+				10EB83E4259C1B8900B81E07 /* Feature */,
 				10EB83CB259C1AFD00B81E07 /* Assets.xcassets */,
 				10EB83CD259C1AFD00B81E07 /* LaunchScreen.storyboard */,
 				10EB83D0259C1AFD00B81E07 /* Info.plist */,
@@ -97,6 +95,40 @@
 				10EB83DB259C1AFD00B81E07 /* Info.plist */,
 			);
 			path = GeofenceAreaTests;
+			sourceTree = "<group>";
+		};
+		10EB83E4259C1B8900B81E07 /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+				10EB83E9259C23D300B81E07 /* ModuleMap */,
+				10EB83E5259C1B9900B81E07 /* App */,
+			);
+			path = Feature;
+			sourceTree = "<group>";
+		};
+		10EB83E5259C1B9900B81E07 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				10EB83C2259C1AF800B81E07 /* AppDelegate.swift */,
+				10EB83E6259C1CCF00B81E07 /* App.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		10EB83E8259C239D00B81E07 /* General */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
+		10EB83E9259C23D300B81E07 /* ModuleMap */ = {
+			isa = PBXGroup;
+			children = (
+				10EB83EA259C243900B81E07 /* GeofenceAreaViewController.swift */,
+				10EB83EB259C243900B81E07 /* GeofenceAreaViewController.xib */,
+			);
+			path = ModuleMap;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,9 +212,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10EB83ED259C243900B81E07 /* GeofenceAreaViewController.xib in Resources */,
 				10EB83CF259C1AFD00B81E07 /* LaunchScreen.storyboard in Resources */,
 				10EB83CC259C1AFD00B81E07 /* Assets.xcassets in Resources */,
-				10EB83CA259C1AF800B81E07 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,9 +232,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				10EB83C7259C1AF800B81E07 /* ViewController.swift in Sources */,
+				10EB83E7259C1CCF00B81E07 /* App.swift in Sources */,
 				10EB83C3259C1AF800B81E07 /* AppDelegate.swift in Sources */,
-				10EB83C5259C1AF800B81E07 /* SceneDelegate.swift in Sources */,
+				10EB83EC259C243900B81E07 /* GeofenceAreaViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,14 +257,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		10EB83C8259C1AF800B81E07 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				10EB83C9259C1AF800B81E07 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		10EB83CD259C1AFD00B81E07 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -294,7 +318,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -348,7 +372,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -364,6 +388,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = GeofenceArea/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -381,6 +406,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = GeofenceArea/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
