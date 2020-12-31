@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GeofenceAreaViewController" customModule="GeofenceArea" customModuleProvider="target">
+            <connections>
+                <outlet property="mapView" destination="Ypk-oI-vWH" id="bhf-ex-bCI"/>
+                <outlet property="statusLabel" destination="gp9-FF-f8s" id="y8p-6R-AWU"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="wifiNameLabel" destination="nEu-UT-pUf" id="WA6-6Y-4Gd"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iZp-GD-tZR" userLabel="ContentView">
+                    <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                    <subviews>
+                        <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" pitchEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ypk-oI-vWH">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="852"/>
+                            <color key="tintColor" name="mainColor"/>
+                        </mapView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wifi Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nEu-UT-pUf" userLabel="Wifi Name Label">
+                            <rect key="frame" x="20" y="24" width="374" height="24"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                            <color key="textColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="INSIDE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gp9-FF-f8s" userLabel="Status Label">
+                            <rect key="frame" x="20" y="791.5" width="374" height="26.5"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                            <color key="textColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstItem="gp9-FF-f8s" firstAttribute="leading" secondItem="iZp-GD-tZR" secondAttribute="leading" constant="20" id="83M-Yb-9lk"/>
+                        <constraint firstAttribute="bottom" secondItem="Ypk-oI-vWH" secondAttribute="bottom" id="Cj9-fJ-Ruv"/>
+                        <constraint firstItem="Ypk-oI-vWH" firstAttribute="leading" secondItem="iZp-GD-tZR" secondAttribute="leading" id="Ggj-A8-KnV"/>
+                        <constraint firstAttribute="trailing" secondItem="Ypk-oI-vWH" secondAttribute="trailing" id="KRm-0H-WgR"/>
+                        <constraint firstAttribute="trailing" secondItem="gp9-FF-f8s" secondAttribute="trailing" constant="20" id="VEi-j1-7Hd"/>
+                        <constraint firstItem="nEu-UT-pUf" firstAttribute="top" secondItem="iZp-GD-tZR" secondAttribute="top" constant="24" id="W8K-D1-gsP"/>
+                        <constraint firstAttribute="bottom" secondItem="gp9-FF-f8s" secondAttribute="bottom" constant="34" id="ZLM-gA-Hvp"/>
+                        <constraint firstItem="nEu-UT-pUf" firstAttribute="leading" secondItem="iZp-GD-tZR" secondAttribute="leading" constant="20" id="jXe-Sp-3Ry"/>
+                        <constraint firstItem="Ypk-oI-vWH" firstAttribute="top" secondItem="iZp-GD-tZR" secondAttribute="top" id="pTa-mY-Y13"/>
+                        <constraint firstAttribute="trailing" secondItem="nEu-UT-pUf" secondAttribute="trailing" constant="20" id="t3N-IV-og0"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="iZp-GD-tZR" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Cog-PP-QcC"/>
+                <constraint firstItem="iZp-GD-tZR" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="P7J-Wz-ZAx"/>
+                <constraint firstAttribute="bottom" secondItem="iZp-GD-tZR" secondAttribute="bottom" id="YYg-BC-nYg"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="iZp-GD-tZR" secondAttribute="trailing" id="nlX-Oi-awB"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="132" y="147"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="mainColor">
+            <color red="0.0" green="0.49803921568627452" blue="0.86274509803921573" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
