@@ -14,7 +14,7 @@ struct Constant {
         static let navigationBar: UIColor = UIColor.systemBlue
     }
     
-    struct UserDefaultKey {
-        static let SAVED_GEOFENCE_KEY: String = "Saved Geofence"
+    struct NotificationKey {
+        static let wifiChange = "WifiChange"
     }
 }

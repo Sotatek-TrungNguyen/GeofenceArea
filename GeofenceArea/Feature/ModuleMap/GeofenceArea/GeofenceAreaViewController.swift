@@ -10,18 +10,31 @@ import UIKit
 import MapKit
 import CoreLocation
 
+public protocol IGeofenceAreaView: class {
+    func updateGeofenceInMap(geofence: GeofenceModel?)
+    func updateGeofenceStatus(geofence: GeofenceModel?)
+    func startMonitoring(geofence: GeofenceModel?)
+}
+
 class GeofenceAreaViewController: UIViewController {
     
     @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var wifiNameLabel: UILabel!
+    @IBOutlet weak var statusLabel: UILabel!
     
     private var locationManager = CLLocationManager()
+    private var presenter: GeofenceAreaPresenter!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        presenter = GeofenceAreaPresenter(view: self, service: GeofenceAreaService())
+        presenter.updateGeofence(nil)
+        
         setupNavigation()
         setupUI()
         setupLocation()
+        setupObserver()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -31,6 +44,8 @@ class GeofenceAreaViewController: UIViewController {
     
     private func setupUI() {
         mapView.delegate = self
+        wifiNameLabel.text = ""
+        statusLabel.text = ""
     }
     
     private func setupNavigation() {
@@ -47,15 +62,15 @@ class GeofenceAreaViewController: UIViewController {
             locationManager.requestAlwaysAuthorization()
             locationManager.requestWhenInUseAuthorization()
         }
-        //Zoom to user location
-        if let userLocation = locationManager.location?.coordinate {
-            let viewRegion = MKCoordinateRegion(center: userLocation, latitudinalMeters: 10000, longitudinalMeters: 10000)
-            mapView.setRegion(viewRegion, animated: false)
-        }
+        mapView.zoomToUserLocation(locationManager, animated: false)
         
         DispatchQueue.main.async { [weak self] in
             self?.locationManager.startUpdatingLocation()
         }
+    }
+    
+    private func setupObserver() {
+        NotificationCenter.default.addObserver(self, selector: #selector(didChangeWifi), name: NSNotification.Name(rawValue: Constant.NotificationKey.wifiChange), object: nil)
     }
 }
 
@@ -74,24 +89,6 @@ extension GeofenceAreaViewController: MKMapViewDelegate {
             return circleRenderer
         }
         return MKOverlayRenderer(overlay: overlay)
-    }
-    
-    // MARK: Map overlay functions
-    func addRadiusOverlay(forGeotification geotification: GeofenceModel) {
-        mapView?.addOverlay(MKCircle(center: geotification.coordinate, radius: geotification.radius))
-    }
-    
-    func removeRadiusOverlay(forGeotification geotification: GeofenceModel) {
-        // Find exactly one overlay which has the same coordinates & radius to remove
-        guard let overlays = mapView?.overlays else { return }
-        for overlay in overlays {
-            guard let circleOverlay = overlay as? MKCircle else { continue }
-            let coord = circleOverlay.coordinate
-            if coord.latitude == geotification.coordinate.latitude && coord.longitude == geotification.coordinate.longitude && circleOverlay.radius == geotification.radius {
-                mapView?.removeOverlay(circleOverlay)
-                break
-            }
-        }
     }
 }
 
@@ -114,9 +111,11 @@ extension GeofenceAreaViewController: CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
+        presenter.checkUpdateGeofenceStatus()
     }
     
     func locationManager(_ manager: CLLocationManager, didExitRegion region: CLRegion) {
+        presenter.checkUpdateGeofenceStatus()
     }
     
 }
@@ -133,17 +132,47 @@ extension GeofenceAreaViewController {
         vc.delegate = self
         self.navigationController?.pushViewController(vc, animated: true)
     }
+    
+    @objc func didChangeWifi() {
+        presenter.checkUpdateGeofenceStatus()
+    }
 }
 
 extension GeofenceAreaViewController: EditGeofenceViewControllerDelegate {
     func tappedDoneEditViewController(coordinate: CLLocationCoordinate2D, radius: Double, wifiName: String){
         let clampedRadius = min(radius, locationManager.maximumRegionMonitoringDistance)
-        let geotification = GeofenceModel(coordinate: coordinate, radius: clampedRadius, wifiName: wifiName)
-        add(geotification)
+        let geofence = GeofenceModel(coordinate: coordinate, radius: clampedRadius, wifiName: wifiName)
+        presenter.updateGeofence(geofence)
+    }
+}
+
+extension GeofenceAreaViewController: IGeofenceAreaView {
+    
+    func startMonitoring(geofence: GeofenceModel?) {
+        if let geofence = geofence, CLLocationManager.isMonitoringAvailable(for: CLCircularRegion.self) {
+            let region = CLCircularRegion(center: geofence.coordinate, radius: geofence.radius, identifier: geofence.wifiName)
+            region.notifyOnExit = true
+            region.notifyOnEntry = true
+            locationManager.startMonitoring(for: region)
+        }
     }
     
-    private func add(_ geotification: GeofenceModel) {
-        mapView.addAnnotation(geotification)
-        addRadiusOverlay(forGeotification: geotification)
+    func updateGeofenceInMap(geofence: GeofenceModel?) {
+        guard let geofence = geofence else { return }
+        
+        wifiNameLabel.text = "Wifi connect:" + "\(geofence.wifiName)"
+        mapView.removeAllGeofences()
+        mapView.addGeofence(geofence: geofence)
+        startMonitoring(geofence: geofence)
     }
+    
+    func updateGeofenceStatus(geofence: GeofenceModel?) {
+        guard let geofence = geofence else { return }
+        let currentCoordinate = mapView.userLocation.coordinate
+        
+        let isInsideArea = presenter.isInsideGeofenceCircle(currentLocation: currentCoordinate, geofence: geofence) || presenter.isMatchWifiName(geofence: geofence)
+        statusLabel.text = isInsideArea ? "Inside" : "Outside"
+        statusLabel.textColor = isInsideArea ? .blue : .red
+    }
+    
 }

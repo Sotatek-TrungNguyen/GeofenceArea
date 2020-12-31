@@ -12,6 +12,7 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
+    var reachability: Reachability?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         application.setupTheme()
@@ -21,9 +22,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func applicationDidEnterBackground(_ application: UIApplication) {
+        reachability?.stopNotifier()
     }
     
     func applicationWillEnterForeground(_ application: UIApplication) {
+    }
+    
+    func applicationDidBecomeActive(_ application: UIApplication) {
+        reachability = application.setupReachability()
     }
 }
 
@@ -33,5 +39,20 @@ extension UIApplication {
         
     }
     
+    func setupReachability() -> Reachability {
+        let reachability = try! Reachability()
+        NotificationCenter.default.addObserver(self, selector: #selector(reachabilityChanged(note:)), name: .reachabilityChanged, object: reachability)
+        
+        do {
+            try reachability.startNotifier()
+        } catch {
+            print("Unable to start notifier")
+        }
+        return reachability
+    }
+
+    @objc func reachabilityChanged(note: Notification) {
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: Constant.NotificationKey.wifiChange), object: nil)
+    }
 }
 
