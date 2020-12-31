@@ -103,6 +103,7 @@ extension EditGeofenceViewController: UITextFieldDelegate {
     }
 }
 
+// MARK: - IEditGeofenceView Method
 extension EditGeofenceViewController: IEditGeofenceView {
     func updateUIWithModel(_ geofence: GeofenceModel) {
         radiusTextField.text = String(geofence.radius)

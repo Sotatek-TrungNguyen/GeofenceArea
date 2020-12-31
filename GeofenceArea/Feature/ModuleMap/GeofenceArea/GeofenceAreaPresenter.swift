@@ -17,7 +17,7 @@ public protocol IGeofenceAreaPresenter {
     func checkUpdateGeofenceStatus()
     
     func isInsideGeofenceCircle(currentLocation: CLLocationCoordinate2D, geofence: GeofenceModel?) -> Bool
-    func isMatchWifiName(geofence: GeofenceModel) -> Bool
+    func isMatchWifiName(geofence: GeofenceModel, currentWifiName: String) -> Bool
 }
 
 public class GeofenceAreaPresenter: IGeofenceAreaPresenter {
@@ -51,20 +51,18 @@ public class GeofenceAreaPresenter: IGeofenceAreaPresenter {
         return region.contains(currentLocation)
     }
     
-    public func isMatchWifiName(geofence: GeofenceModel) -> Bool {
-        let currentWifiName = getWiFiSsid()
+    public func isMatchWifiName(geofence: GeofenceModel, currentWifiName: String = "") -> Bool {
         let wifiName = geofence.wifiName
         return !wifiName.isEmpty && currentWifiName == wifiName
     }
 }
 
 extension GeofenceAreaPresenter {
-    
     /*
      Get WiFiSsid
      Source: https://github.com/HackingGate/iOS13-WiFi-Info
      */
-    private func getWiFiSsid() -> String? {
+    public func getWiFiSsid() -> String? {
         var ssid: String?
         if let interfaces = CNCopySupportedInterfaces() as NSArray? {
             for interface in interfaces {

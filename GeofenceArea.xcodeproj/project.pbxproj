@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		103BE8E7259CDD5600487748 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103BE8E6259CDD5600487748 /* Reachability.swift */; };
 		10568085259DC2E1008FB888 /* EditGeofencePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10568084259DC2E1008FB888 /* EditGeofencePresenter.swift */; };
+		1056808E259DD699008FB888 /* GeofenceAreaUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1056808D259DD699008FB888 /* GeofenceAreaUnitTests.swift */; };
 		109B60F2259D733100317C14 /* AppPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109B60F1259D733100317C14 /* AppPreferences.swift */; };
 		109B60F4259D7CCE00317C14 /* GeofenceAreaPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109B60F3259D7CCE00317C14 /* GeofenceAreaPresenter.swift */; };
 		109B60F6259D8B6400317C14 /* GeofenceAreaService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109B60F5259D8B6400317C14 /* GeofenceAreaService.swift */; };
@@ -20,7 +21,6 @@
 		10EB83C3259C1AF800B81E07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EB83C2259C1AF800B81E07 /* AppDelegate.swift */; };
 		10EB83CC259C1AFD00B81E07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10EB83CB259C1AFD00B81E07 /* Assets.xcassets */; };
 		10EB83CF259C1AFD00B81E07 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10EB83CD259C1AFD00B81E07 /* LaunchScreen.storyboard */; };
-		10EB83DA259C1AFD00B81E07 /* GeofenceAreaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EB83D9259C1AFD00B81E07 /* GeofenceAreaTests.swift */; };
 		10EB83E7259C1CCF00B81E07 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EB83E6259C1CCF00B81E07 /* App.swift */; };
 		10EB83EC259C243900B81E07 /* GeofenceAreaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EB83EA259C243900B81E07 /* GeofenceAreaViewController.swift */; };
 		10EB83ED259C243900B81E07 /* GeofenceAreaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10EB83EB259C243900B81E07 /* GeofenceAreaViewController.xib */; };
@@ -29,7 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		10EB83D6259C1AFD00B81E07 /* PBXContainerItemProxy */ = {
+		10568090259DD699008FB888 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 10EB83B7259C1AF800B81E07 /* Project object */;
 			proxyType = 1;
@@ -42,6 +42,9 @@
 		103BE8E6259CDD5600487748 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		10568084259DC2E1008FB888 /* EditGeofencePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditGeofencePresenter.swift; sourceTree = "<group>"; };
 		10568086259DCB87008FB888 /* GeofenceArea.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GeofenceArea.entitlements; sourceTree = "<group>"; };
+		1056808B259DD699008FB888 /* GeofenceAreaUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GeofenceAreaUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1056808D259DD699008FB888 /* GeofenceAreaUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeofenceAreaUnitTests.swift; sourceTree = "<group>"; };
+		1056808F259DD699008FB888 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		109B60F1259D733100317C14 /* AppPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPreferences.swift; sourceTree = "<group>"; };
 		109B60F3259D7CCE00317C14 /* GeofenceAreaPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeofenceAreaPresenter.swift; sourceTree = "<group>"; };
 		109B60F5259D8B6400317C14 /* GeofenceAreaService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeofenceAreaService.swift; sourceTree = "<group>"; };
@@ -55,9 +58,6 @@
 		10EB83CB259C1AFD00B81E07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		10EB83CE259C1AFD00B81E07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		10EB83D0259C1AFD00B81E07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		10EB83D5259C1AFD00B81E07 /* GeofenceAreaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GeofenceAreaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		10EB83D9259C1AFD00B81E07 /* GeofenceAreaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeofenceAreaTests.swift; sourceTree = "<group>"; };
-		10EB83DB259C1AFD00B81E07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		10EB83E6259C1CCF00B81E07 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		10EB83EA259C243900B81E07 /* GeofenceAreaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeofenceAreaViewController.swift; sourceTree = "<group>"; };
 		10EB83EB259C243900B81E07 /* GeofenceAreaViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GeofenceAreaViewController.xib; sourceTree = "<group>"; };
@@ -66,14 +66,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		10EB83BC259C1AF800B81E07 /* Frameworks */ = {
+		10568088259DD699008FB888 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		10EB83D2259C1AFD00B81E07 /* Frameworks */ = {
+		10EB83BC259C1AF800B81E07 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -97,6 +97,15 @@
 				103BE8E6259CDD5600487748 /* Reachability.swift */,
 			);
 			path = ReachabilitySwift;
+			sourceTree = "<group>";
+		};
+		1056808C259DD699008FB888 /* GeofenceAreaUnitTests */ = {
+			isa = PBXGroup;
+			children = (
+				1056808D259DD699008FB888 /* GeofenceAreaUnitTests.swift */,
+				1056808F259DD699008FB888 /* Info.plist */,
+			);
+			path = GeofenceAreaUnitTests;
 			sourceTree = "<group>";
 		};
 		10BD19C2259C6A530042B1AF /* GeofenceArea */ = {
@@ -132,7 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				10EB83C1259C1AF800B81E07 /* GeofenceArea */,
-				10EB83D8259C1AFD00B81E07 /* GeofenceAreaTests */,
+				1056808C259DD699008FB888 /* GeofenceAreaUnitTests */,
 				10EB83C0259C1AF800B81E07 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -141,7 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				10EB83BF259C1AF800B81E07 /* GeofenceArea.app */,
-				10EB83D5259C1AFD00B81E07 /* GeofenceAreaTests.xctest */,
+				1056808B259DD699008FB888 /* GeofenceAreaUnitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -157,15 +166,6 @@
 				10EB83D0259C1AFD00B81E07 /* Info.plist */,
 			);
 			path = GeofenceArea;
-			sourceTree = "<group>";
-		};
-		10EB83D8259C1AFD00B81E07 /* GeofenceAreaTests */ = {
-			isa = PBXGroup;
-			children = (
-				10EB83D9259C1AFD00B81E07 /* GeofenceAreaTests.swift */,
-				10EB83DB259C1AFD00B81E07 /* Info.plist */,
-			);
-			path = GeofenceAreaTests;
 			sourceTree = "<group>";
 		};
 		10EB83E4259C1B8900B81E07 /* Feature */ = {
@@ -220,6 +220,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		1056808A259DD699008FB888 /* GeofenceAreaUnitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 10568092259DD699008FB888 /* Build configuration list for PBXNativeTarget "GeofenceAreaUnitTests" */;
+			buildPhases = (
+				10568087259DD699008FB888 /* Sources */,
+				10568088259DD699008FB888 /* Frameworks */,
+				10568089259DD699008FB888 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				10568091259DD699008FB888 /* PBXTargetDependency */,
+			);
+			name = GeofenceAreaUnitTests;
+			productName = GeofenceAreaUnitTests;
+			productReference = 1056808B259DD699008FB888 /* GeofenceAreaUnitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		10EB83BE259C1AF800B81E07 /* GeofenceArea */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 10EB83DE259C1AFD00B81E07 /* Build configuration list for PBXNativeTarget "GeofenceArea" */;
@@ -237,24 +255,6 @@
 			productReference = 10EB83BF259C1AF800B81E07 /* GeofenceArea.app */;
 			productType = "com.apple.product-type.application";
 		};
-		10EB83D4259C1AFD00B81E07 /* GeofenceAreaTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 10EB83E1259C1AFD00B81E07 /* Build configuration list for PBXNativeTarget "GeofenceAreaTests" */;
-			buildPhases = (
-				10EB83D1259C1AFD00B81E07 /* Sources */,
-				10EB83D2259C1AFD00B81E07 /* Frameworks */,
-				10EB83D3259C1AFD00B81E07 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				10EB83D7259C1AFD00B81E07 /* PBXTargetDependency */,
-			);
-			name = GeofenceAreaTests;
-			productName = GeofenceAreaTests;
-			productReference = 10EB83D5259C1AFD00B81E07 /* GeofenceAreaTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -265,12 +265,12 @@
 				LastUpgradeCheck = 1140;
 				ORGANIZATIONNAME = "Nguyen Thanh Trung";
 				TargetAttributes = {
-					10EB83BE259C1AF800B81E07 = {
-						CreatedOnToolsVersion = 11.4.1;
-					};
-					10EB83D4259C1AFD00B81E07 = {
+					1056808A259DD699008FB888 = {
 						CreatedOnToolsVersion = 11.4.1;
 						TestTargetID = 10EB83BE259C1AF800B81E07;
+					};
+					10EB83BE259C1AF800B81E07 = {
+						CreatedOnToolsVersion = 11.4.1;
 					};
 				};
 			};
@@ -288,12 +288,19 @@
 			projectRoot = "";
 			targets = (
 				10EB83BE259C1AF800B81E07 /* GeofenceArea */,
-				10EB83D4259C1AFD00B81E07 /* GeofenceAreaTests */,
+				1056808A259DD699008FB888 /* GeofenceAreaUnitTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		10568089259DD699008FB888 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		10EB83BD259C1AF800B81E07 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -305,16 +312,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		10EB83D3259C1AFD00B81E07 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		10568087259DD699008FB888 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1056808E259DD699008FB888 /* GeofenceAreaUnitTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		10EB83BB259C1AF800B81E07 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -336,21 +344,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		10EB83D1259C1AFD00B81E07 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				10EB83DA259C1AFD00B81E07 /* GeofenceAreaTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		10EB83D7259C1AFD00B81E07 /* PBXTargetDependency */ = {
+		10568091259DD699008FB888 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 10EB83BE259C1AF800B81E07 /* GeofenceArea */;
-			targetProxy = 10EB83D6259C1AFD00B81E07 /* PBXContainerItemProxy */;
+			targetProxy = 10568090259DD699008FB888 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -366,6 +366,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		10568093259DD699008FB888 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GeofenceAreaUnitTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.trungnguyen.GeofenceAreaUnitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GeofenceArea.app/GeofenceArea";
+			};
+			name = Debug;
+		};
+		10568094259DD699008FB888 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GeofenceAreaUnitTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.trungnguyen.GeofenceAreaUnitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GeofenceArea.app/GeofenceArea";
+			};
+			name = Release;
+		};
 		10EB83DC259C1AFD00B81E07 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -520,51 +560,18 @@
 			};
 			name = Release;
 		};
-		10EB83E2259C1AFD00B81E07 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = GeofenceAreaTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.trungnguyen.GeofenceAreaTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GeofenceArea.app/GeofenceArea";
-			};
-			name = Debug;
-		};
-		10EB83E3259C1AFD00B81E07 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = GeofenceAreaTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.trungnguyen.GeofenceAreaTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GeofenceArea.app/GeofenceArea";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		10568092259DD699008FB888 /* Build configuration list for PBXNativeTarget "GeofenceAreaUnitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				10568093259DD699008FB888 /* Debug */,
+				10568094259DD699008FB888 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		10EB83BA259C1AF800B81E07 /* Build configuration list for PBXProject "GeofenceArea" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -579,15 +586,6 @@
 			buildConfigurations = (
 				10EB83DF259C1AFD00B81E07 /* Debug */,
 				10EB83E0259C1AFD00B81E07 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		10EB83E1259C1AFD00B81E07 /* Build configuration list for PBXNativeTarget "GeofenceAreaTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				10EB83E2259C1AFD00B81E07 /* Debug */,
-				10EB83E3259C1AFD00B81E07 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -138,6 +138,7 @@ extension GeofenceAreaViewController {
     }
 }
 
+// MARK: - EditGeofenceViewControllerDelegate
 extension GeofenceAreaViewController: EditGeofenceViewControllerDelegate {
     func tappedDoneEditViewController(coordinate: CLLocationCoordinate2D, radius: Double, wifiName: String){
         let clampedRadius = min(radius, locationManager.maximumRegionMonitoringDistance)
@@ -146,6 +147,7 @@ extension GeofenceAreaViewController: EditGeofenceViewControllerDelegate {
     }
 }
 
+// MARK: - IGeofenceAreaView Method
 extension GeofenceAreaViewController: IGeofenceAreaView {
     
     func startMonitoring(geofence: GeofenceModel?) {
@@ -169,8 +171,9 @@ extension GeofenceAreaViewController: IGeofenceAreaView {
     func updateGeofenceStatus(geofence: GeofenceModel?) {
         guard let geofence = geofence else { return }
         let currentCoordinate = mapView.userLocation.coordinate
+        let currentWifiName = presenter.getWiFiSsid() ?? ""
         
-        let isInsideArea = presenter.isInsideGeofenceCircle(currentLocation: currentCoordinate, geofence: geofence) || presenter.isMatchWifiName(geofence: geofence)
+        let isInsideArea = presenter.isInsideGeofenceCircle(currentLocation: currentCoordinate, geofence: geofence) || presenter.isMatchWifiName(geofence: geofence, currentWifiName: currentWifiName)
         statusLabel.text = isInsideArea ? "Inside" : "Outside"
         statusLabel.textColor = isInsideArea ? .blue : .red
     }
