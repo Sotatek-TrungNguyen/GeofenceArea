@@ -23,14 +23,25 @@ class GeofenceAreaViewController: UIViewController {
     @IBOutlet weak var statusLabel: UILabel!
     
     private var locationManager = CLLocationManager()
-    private var presenter: GeofenceAreaPresenter!
+    private var presenter: IGeofenceAreaPresenter?
+    
+    init() {
+        super.init(nibName: "GeofenceAreaViewController", bundle: nil)
+    }
+    
+    init(presenter: IGeofenceAreaPresenter) {
+        self.presenter = presenter
+        super.init(nibName: "GeofenceAreaViewController", bundle: nil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        presenter = GeofenceAreaPresenter(view: self, service: GeofenceAreaService())
-        presenter.updateGeofence(nil)
-        
+        presenter?.onViewDidLoad(view: self)
         setupNavigation()
         setupUI()
         setupLocation()
@@ -111,11 +122,11 @@ extension GeofenceAreaViewController: CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
-        presenter.checkUpdateGeofenceStatus()
+        presenter?.checkUpdateGeofenceStatus()
     }
     
     func locationManager(_ manager: CLLocationManager, didExitRegion region: CLRegion) {
-        presenter.checkUpdateGeofenceStatus()
+        presenter?.checkUpdateGeofenceStatus()
     }
     
 }
@@ -128,13 +139,15 @@ extension GeofenceAreaViewController {
     }
     
     @objc func tappedEdit() {
-        let vc = EditGeofenceViewController()
-        vc.delegate = self
-        self.navigationController?.pushViewController(vc, animated: true)
+        let service = GeofenceAreaService()
+        let presenter = EditGeofencePresenter(service: service)
+        let editVC = EditGeofenceViewController(presenter: presenter)
+        editVC.delegate = self
+        self.navigationController?.pushViewController(editVC, animated: true)
     }
     
     @objc func didChangeWifi() {
-        presenter.checkUpdateGeofenceStatus()
+        presenter?.checkUpdateGeofenceStatus()
     }
 }
 
@@ -143,7 +156,7 @@ extension GeofenceAreaViewController: EditGeofenceViewControllerDelegate {
     func tappedDoneEditViewController(coordinate: CLLocationCoordinate2D, radius: Double, wifiName: String){
         let clampedRadius = min(radius, locationManager.maximumRegionMonitoringDistance)
         let geofence = GeofenceModel(coordinate: coordinate, radius: clampedRadius, wifiName: wifiName)
-        presenter.updateGeofence(geofence)
+        presenter?.updateGeofence(geofence)
     }
 }
 
@@ -169,7 +182,7 @@ extension GeofenceAreaViewController: IGeofenceAreaView {
     }
     
     func updateGeofenceStatus(geofence: GeofenceModel?) {
-        guard let geofence = geofence else { return }
+        guard let geofence = geofence, let presenter = presenter else { return }
         let currentCoordinate = mapView.userLocation.coordinate
         let currentWifiName = presenter.getWiFiSsid() ?? ""
         

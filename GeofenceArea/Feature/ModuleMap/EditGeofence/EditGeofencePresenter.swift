@@ -9,6 +9,7 @@
 import Foundation
 
 public protocol IEditGeofencePresenter {
+    func onViewDidLoad(view: IEditGeofenceView)
     func loadGeofence()
 }
 
@@ -17,9 +18,14 @@ public class EditGeofencePresenter: IEditGeofencePresenter {
     private weak var view: IEditGeofenceView?
     private let service: IGeofenceAreaService
     
-    init(view: IEditGeofenceView, service: IGeofenceAreaService) {
-        self.view = view
+    init(service: IGeofenceAreaService) {
         self.service = service
+    }
+    
+    public func onViewDidLoad(view: IEditGeofenceView) {
+        self.view = view
+        // Update UI when have geofence before
+        self.loadGeofence()
     }
     
     public func loadGeofence() {

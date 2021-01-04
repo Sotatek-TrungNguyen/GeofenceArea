@@ -23,19 +23,30 @@ class EditGeofenceViewController: UIViewController {
     @IBOutlet weak var radiusTextField: UITextField!
     @IBOutlet weak var wifiNameTextField: UITextField!
     
-    public weak var delegate: EditGeofenceViewControllerDelegate?
-    private var presenter: EditGeofencePresenter!
     private var locationManager = CLLocationManager()
+    public weak var delegate: EditGeofenceViewControllerDelegate?
+    private var presenter: IEditGeofencePresenter?
+    
+    init() {
+        super.init(nibName: "EditGeofenceViewController", bundle: nil)
+    }
+    
+    init(presenter: IEditGeofencePresenter) {
+        self.presenter = presenter
+        super.init(nibName: "EditGeofenceViewController", bundle: nil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        presenter?.onViewDidLoad(view: self)
         setupNavigation()
         hideKeyboardWhenTappedAround()
         setupLocation()
-        
-        presenter = EditGeofencePresenter(view: self, service: GeofenceAreaService())
-        presenter.loadGeofence()
     }
     
     private func setupNavigation() {
@@ -61,20 +72,20 @@ class EditGeofenceViewController: UIViewController {
 
 // MARK: - Location Manager Delegate
 extension EditGeofenceViewController: CLLocationManagerDelegate {
-  
-  func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-      switch status {
-      case .authorizedAlways, .authorizedWhenInUse:
-          mapView.showsUserLocation = true
-//          mapView.zoomToUserLocation()
-      case .denied, .restricted:
-          self.presentAlert(title: "Need permission", message: "Please allow location access in Settings", actionTitle: "Go to Settings", actionHandler: { action in
-              UIApplication.shared.open(NSURL(string: UIApplication.openSettingsURLString)! as URL)
-          })
-      default:
-          break
-      }
-  }
+    
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        switch status {
+        case .authorizedAlways, .authorizedWhenInUse:
+            mapView.showsUserLocation = true
+        //          mapView.zoomToUserLocation()
+        case .denied, .restricted:
+            self.presentAlert(title: "Need permission", message: "Please allow location access in Settings", actionTitle: "Go to Settings", actionHandler: { action in
+                UIApplication.shared.open(NSURL(string: UIApplication.openSettingsURLString)! as URL)
+            })
+        default:
+            break
+        }
+    }
     
 }
 

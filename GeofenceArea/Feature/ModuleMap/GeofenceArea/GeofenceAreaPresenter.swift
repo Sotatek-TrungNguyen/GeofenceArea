@@ -11,6 +11,7 @@ import MapKit
 import SystemConfiguration.CaptiveNetwork
 
 public protocol IGeofenceAreaPresenter {
+    func onViewDidLoad(view: IGeofenceAreaView)
     
     func getGeofence() -> GeofenceModel?
     func updateGeofence(_ geofence: GeofenceModel?)
@@ -18,6 +19,7 @@ public protocol IGeofenceAreaPresenter {
     
     func isInsideGeofenceCircle(currentLocation: CLLocationCoordinate2D, geofence: GeofenceModel?) -> Bool
     func isMatchWifiName(geofence: GeofenceModel, currentWifiName: String) -> Bool
+    func getWiFiSsid() -> String?
 }
 
 public class GeofenceAreaPresenter: IGeofenceAreaPresenter {
@@ -25,9 +27,15 @@ public class GeofenceAreaPresenter: IGeofenceAreaPresenter {
     private weak var view: IGeofenceAreaView?
     private let service: IGeofenceAreaService
     
-    init(view: IGeofenceAreaView, service: IGeofenceAreaService) {
-        self.view = view
+    init(service: IGeofenceAreaService) {
         self.service = service
+    }
+    
+    public func onViewDidLoad(view: IGeofenceAreaView) {
+        self.view = view
+        
+        // Remove old geofence
+        self.updateGeofence(nil)
     }
     
     public func getGeofence() -> GeofenceModel? {
