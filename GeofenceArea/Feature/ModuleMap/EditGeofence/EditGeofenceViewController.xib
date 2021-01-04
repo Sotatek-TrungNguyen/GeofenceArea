@@ -63,6 +63,7 @@
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1000" borderStyle="roundedRect" placeholder="Radius in meters" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vcd-XT-sZ5" userLabel="tfRadius">
                                                     <rect key="frame" x="118" y="3" width="256" height="34"/>
                                                     <color key="tintColor" name="mainColor"/>
+                                                    <accessibility key="accessibilityConfiguration" identifier="radiusTextField"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done"/>
                                                 </textField>
@@ -95,6 +96,7 @@
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter wifi name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bdI-Ds-w0e" userLabel="tfWifi">
                                                     <rect key="frame" x="118" y="3" width="256" height="34"/>
                                                     <color key="tintColor" name="mainColor"/>
+                                                    <accessibility key="accessibilityConfiguration" identifier="wifiNameTextField"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                                 </textField>
