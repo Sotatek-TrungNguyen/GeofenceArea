@@ -12,6 +12,7 @@
 		1056808E259DD699008FB888 /* GeofenceAreaUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1056808D259DD699008FB888 /* GeofenceAreaUnitTests.swift */; };
 		1076097E25A2B93F0025B762 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1076097D25A2B93F0025B762 /* String+Extensions.swift */; };
 		1076098625A2C6470025B762 /* GeofenceAreaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1076098525A2C6470025B762 /* GeofenceAreaUITests.swift */; };
+		1091235025A31FE500A90FC1 /* EditGeofenceAreaUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1091234F25A31FE500A90FC1 /* EditGeofenceAreaUnitTests.swift */; };
 		109B60F2259D733100317C14 /* AppPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109B60F1259D733100317C14 /* AppPreferences.swift */; };
 		109B60F4259D7CCE00317C14 /* GeofenceAreaPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109B60F3259D7CCE00317C14 /* GeofenceAreaPresenter.swift */; };
 		109B60F6259D8B6400317C14 /* GeofenceAreaService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109B60F5259D8B6400317C14 /* GeofenceAreaService.swift */; };
@@ -58,6 +59,7 @@
 		1076098325A2C6470025B762 /* GeofenceAreaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GeofenceAreaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1076098525A2C6470025B762 /* GeofenceAreaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeofenceAreaUITests.swift; sourceTree = "<group>"; };
 		1076098725A2C6470025B762 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1091234F25A31FE500A90FC1 /* EditGeofenceAreaUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditGeofenceAreaUnitTests.swift; sourceTree = "<group>"; };
 		109B60F1259D733100317C14 /* AppPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPreferences.swift; sourceTree = "<group>"; };
 		109B60F3259D7CCE00317C14 /* GeofenceAreaPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeofenceAreaPresenter.swift; sourceTree = "<group>"; };
 		109B60F5259D8B6400317C14 /* GeofenceAreaService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeofenceAreaService.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				1056808D259DD699008FB888 /* GeofenceAreaUnitTests.swift */,
+				1091234F25A31FE500A90FC1 /* EditGeofenceAreaUnitTests.swift */,
 				1056808F259DD699008FB888 /* Info.plist */,
 			);
 			path = GeofenceAreaUnitTests;
@@ -381,6 +384,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1091235025A31FE500A90FC1 /* EditGeofenceAreaUnitTests.swift in Sources */,
 				1056808E259DD699008FB888 /* GeofenceAreaUnitTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -447,6 +451,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ND57AXU89U;
 				INFOPLIST_FILE = GeofenceAreaUnitTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -467,6 +472,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ND57AXU89U;
 				INFOPLIST_FILE = GeofenceAreaUnitTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -486,6 +492,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ND57AXU89U;
 				INFOPLIST_FILE = GeofenceAreaUITests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -505,6 +512,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ND57AXU89U;
 				INFOPLIST_FILE = GeofenceAreaUITests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (

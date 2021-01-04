@@ -43,95 +43,123 @@
                         <constraint firstItem="3dq-I6-7zg" firstAttribute="centerY" secondItem="83d-mQ-8U9" secondAttribute="centerY" id="z89-1G-RRb"/>
                     </constraints>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1OI-xH-SuS" userLabel="View Content">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dVA-7T-iJg" userLabel="View Content">
                     <rect key="frame" x="0.0" y="324" width="414" height="572"/>
                     <subviews>
-                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="yF5-cx-60K">
-                            <rect key="frame" x="20" y="20" width="374" height="100"/>
+                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2um-WM-OJD">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="572"/>
                             <subviews>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qkp-8w-zR0">
-                                    <rect key="frame" x="0.0" y="0.0" width="374" height="40"/>
+                                <view contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f6i-0f-gMW" userLabel="ContentView">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="572"/>
                                     <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="E64-gQ-kzy">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="40"/>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="yF5-cx-60K">
+                                            <rect key="frame" x="20" y="20" width="374" height="100"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Radius(metes)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wQF-yP-XPw">
-                                                    <rect key="frame" x="0.0" y="11" width="108" height="18"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1000" borderStyle="roundedRect" placeholder="Radius in meters" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vcd-XT-sZ5" userLabel="tfRadius">
-                                                    <rect key="frame" x="118" y="3" width="256" height="34"/>
-                                                    <color key="tintColor" name="mainColor"/>
-                                                    <accessibility key="accessibilityConfiguration" identifier="radiusTextField"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done"/>
-                                                </textField>
-                                            </subviews>
-                                        </stackView>
-                                    </subviews>
-                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                    <constraints>
-                                        <constraint firstItem="E64-gQ-kzy" firstAttribute="leading" secondItem="Qkp-8w-zR0" secondAttribute="leading" id="GiD-GA-F3i"/>
-                                        <constraint firstAttribute="height" constant="40" id="V0G-72-DvG"/>
-                                        <constraint firstItem="E64-gQ-kzy" firstAttribute="top" secondItem="Qkp-8w-zR0" secondAttribute="top" id="igm-6t-Gyg"/>
-                                        <constraint firstAttribute="bottom" secondItem="E64-gQ-kzy" secondAttribute="bottom" id="ioK-sD-i2x"/>
-                                        <constraint firstAttribute="trailing" secondItem="E64-gQ-kzy" secondAttribute="trailing" id="rJj-1t-JwV"/>
-                                    </constraints>
-                                </view>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Jx-C1-Pke">
-                                    <rect key="frame" x="0.0" y="60" width="374" height="40"/>
-                                    <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="QOs-B2-LwA">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="40"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wifi Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="geB-IQ-cN8">
-                                                    <rect key="frame" x="0.0" y="11" width="108" height="18"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qkp-8w-zR0">
+                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="40"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="E64-gQ-kzy">
+                                                            <rect key="frame" x="0.0" y="0.0" width="374" height="40"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Radius(metes)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wQF-yP-XPw">
+                                                                    <rect key="frame" x="0.0" y="11" width="108" height="18"/>
+                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1000" borderStyle="roundedRect" placeholder="Radius in meters" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vcd-XT-sZ5" userLabel="tfRadius">
+                                                                    <rect key="frame" x="118" y="3" width="256" height="34"/>
+                                                                    <color key="tintColor" name="mainColor"/>
+                                                                    <accessibility key="accessibilityConfiguration" identifier="radiusTextField"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                                    <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done"/>
+                                                                </textField>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="108" id="w3L-GZ-zg0"/>
+                                                        <constraint firstItem="E64-gQ-kzy" firstAttribute="leading" secondItem="Qkp-8w-zR0" secondAttribute="leading" id="GiD-GA-F3i"/>
+                                                        <constraint firstAttribute="height" constant="40" id="V0G-72-DvG"/>
+                                                        <constraint firstItem="E64-gQ-kzy" firstAttribute="top" secondItem="Qkp-8w-zR0" secondAttribute="top" id="igm-6t-Gyg"/>
+                                                        <constraint firstAttribute="bottom" secondItem="E64-gQ-kzy" secondAttribute="bottom" id="ioK-sD-i2x"/>
+                                                        <constraint firstAttribute="trailing" secondItem="E64-gQ-kzy" secondAttribute="trailing" id="rJj-1t-JwV"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter wifi name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bdI-Ds-w0e" userLabel="tfWifi">
-                                                    <rect key="frame" x="118" y="3" width="256" height="34"/>
-                                                    <color key="tintColor" name="mainColor"/>
-                                                    <accessibility key="accessibilityConfiguration" identifier="wifiNameTextField"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <textInputTraits key="textInputTraits" returnKeyType="done"/>
-                                                </textField>
+                                                </view>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Jx-C1-Pke">
+                                                    <rect key="frame" x="0.0" y="60" width="374" height="40"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="QOs-B2-LwA">
+                                                            <rect key="frame" x="0.0" y="0.0" width="374" height="40"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wifi Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="geB-IQ-cN8">
+                                                                    <rect key="frame" x="0.0" y="11" width="108" height="18"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="108" id="w3L-GZ-zg0"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter wifi name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bdI-Ds-w0e" userLabel="tfWifi">
+                                                                    <rect key="frame" x="118" y="3" width="256" height="34"/>
+                                                                    <color key="tintColor" name="mainColor"/>
+                                                                    <accessibility key="accessibilityConfiguration" identifier="wifiNameTextField"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                                    <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                                                </textField>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="QOs-B2-LwA" secondAttribute="bottom" id="IlA-dp-hVj"/>
+                                                        <constraint firstItem="QOs-B2-LwA" firstAttribute="top" secondItem="0Jx-C1-Pke" secondAttribute="top" id="L6Y-Xl-rjI"/>
+                                                        <constraint firstAttribute="trailing" secondItem="QOs-B2-LwA" secondAttribute="trailing" id="NMS-H2-HEh"/>
+                                                        <constraint firstItem="QOs-B2-LwA" firstAttribute="leading" secondItem="0Jx-C1-Pke" secondAttribute="leading" id="rWc-Z0-BQN"/>
+                                                        <constraint firstAttribute="height" constant="40" id="sLB-bx-btA"/>
+                                                    </constraints>
+                                                </view>
                                             </subviews>
                                         </stackView>
                                     </subviews>
-                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
-                                        <constraint firstAttribute="bottom" secondItem="QOs-B2-LwA" secondAttribute="bottom" id="IlA-dp-hVj"/>
-                                        <constraint firstItem="QOs-B2-LwA" firstAttribute="top" secondItem="0Jx-C1-Pke" secondAttribute="top" id="L6Y-Xl-rjI"/>
-                                        <constraint firstAttribute="trailing" secondItem="QOs-B2-LwA" secondAttribute="trailing" id="NMS-H2-HEh"/>
-                                        <constraint firstItem="QOs-B2-LwA" firstAttribute="leading" secondItem="0Jx-C1-Pke" secondAttribute="leading" id="rWc-Z0-BQN"/>
-                                        <constraint firstAttribute="height" constant="40" id="sLB-bx-btA"/>
+                                        <constraint firstItem="yF5-cx-60K" firstAttribute="top" secondItem="f6i-0f-gMW" secondAttribute="top" constant="20" id="dAj-rr-Q1K"/>
+                                        <constraint firstItem="yF5-cx-60K" firstAttribute="leading" secondItem="f6i-0f-gMW" secondAttribute="leading" constant="20" id="fNy-dT-eNe"/>
+                                        <constraint firstAttribute="trailing" secondItem="yF5-cx-60K" secondAttribute="trailing" constant="20" id="h4i-Cm-23v"/>
                                     </constraints>
                                 </view>
                             </subviews>
-                        </stackView>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="f6i-0f-gMW" firstAttribute="height" secondItem="2um-WM-OJD" secondAttribute="height" priority="250" id="0y8-jf-lic"/>
+                                <constraint firstItem="f6i-0f-gMW" firstAttribute="leading" secondItem="2um-WM-OJD" secondAttribute="leading" id="J9d-6g-X8E"/>
+                                <constraint firstItem="f6i-0f-gMW" firstAttribute="width" secondItem="2um-WM-OJD" secondAttribute="width" id="OZL-YK-Qu1"/>
+                                <constraint firstItem="f6i-0f-gMW" firstAttribute="top" secondItem="2um-WM-OJD" secondAttribute="top" id="Olf-Bk-2Bt"/>
+                                <constraint firstAttribute="trailing" secondItem="f6i-0f-gMW" secondAttribute="trailing" id="hOk-Eo-3o6"/>
+                                <constraint firstAttribute="bottom" secondItem="f6i-0f-gMW" secondAttribute="bottom" id="yeC-3b-0nR"/>
+                            </constraints>
+                            <viewLayoutGuide key="contentLayoutGuide" id="i9J-bZ-68h"/>
+                            <viewLayoutGuide key="frameLayoutGuide" id="N5R-vK-c5H"/>
+                        </scrollView>
                     </subviews>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstItem="yF5-cx-60K" firstAttribute="top" secondItem="1OI-xH-SuS" secondAttribute="top" constant="20" id="790-NU-D7I"/>
-                        <constraint firstItem="yF5-cx-60K" firstAttribute="leading" secondItem="1OI-xH-SuS" secondAttribute="leading" constant="20" id="Aoc-D6-BXE"/>
-                        <constraint firstAttribute="trailing" secondItem="yF5-cx-60K" secondAttribute="trailing" constant="20" id="PzW-Nx-Cxc"/>
+                        <constraint firstItem="2um-WM-OJD" firstAttribute="leading" secondItem="dVA-7T-iJg" secondAttribute="leading" id="Ayb-kv-BH5"/>
+                        <constraint firstAttribute="bottom" secondItem="2um-WM-OJD" secondAttribute="bottom" id="baT-lV-OgR"/>
+                        <constraint firstAttribute="trailing" secondItem="2um-WM-OJD" secondAttribute="trailing" id="h6f-ow-DL2"/>
+                        <constraint firstItem="2um-WM-OJD" firstAttribute="top" secondItem="dVA-7T-iJg" secondAttribute="top" id="kPv-P6-A4q"/>
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="1OI-xH-SuS" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="2j9-ek-cnb"/>
-                <constraint firstAttribute="bottom" secondItem="1OI-xH-SuS" secondAttribute="bottom" id="Mdq-3X-Ewv"/>
+                <constraint firstAttribute="trailing" secondItem="dVA-7T-iJg" secondAttribute="trailing" id="08u-qx-N6c"/>
+                <constraint firstItem="dVA-7T-iJg" firstAttribute="top" secondItem="83d-mQ-8U9" secondAttribute="bottom" id="S2n-Mt-n8Z"/>
+                <constraint firstItem="dVA-7T-iJg" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="YCH-Zc-fXj"/>
+                <constraint firstAttribute="bottom" secondItem="dVA-7T-iJg" secondAttribute="bottom" id="ZfY-qP-Srh"/>
                 <constraint firstItem="83d-mQ-8U9" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="a0C-yr-di5"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="1OI-xH-SuS" secondAttribute="trailing" id="cvw-Ec-lpx"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="83d-mQ-8U9" secondAttribute="trailing" id="lcS-PM-xo4"/>
                 <constraint firstItem="83d-mQ-8U9" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="srI-Mh-LrC"/>
-                <constraint firstItem="1OI-xH-SuS" firstAttribute="top" secondItem="83d-mQ-8U9" secondAttribute="bottom" id="w4d-pp-vyi"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="133" y="152"/>

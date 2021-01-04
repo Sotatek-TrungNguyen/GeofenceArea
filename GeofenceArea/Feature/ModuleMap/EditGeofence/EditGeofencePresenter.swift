@@ -10,7 +10,7 @@ import Foundation
 
 public protocol IEditGeofencePresenter {
     func onViewDidLoad(view: IEditGeofenceView)
-    func loadGeofence()
+    @discardableResult func loadGeofence() -> GeofenceModel?
 }
 
 public class EditGeofencePresenter: IEditGeofencePresenter {
@@ -26,8 +26,10 @@ public class EditGeofencePresenter: IEditGeofencePresenter {
         self.view = view
     }
     
-    public func loadGeofence() {
-        guard let geofence = service.getGeofence() else { return }
+    @discardableResult
+    public func loadGeofence() -> GeofenceModel?{
+        guard let geofence = service.getGeofence() else { return nil}
         self.view?.updateUIWithModel(geofence)
+        return geofence
     }
 }

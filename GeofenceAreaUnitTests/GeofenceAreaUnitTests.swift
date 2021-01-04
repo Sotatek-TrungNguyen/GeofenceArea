@@ -11,15 +11,15 @@ import MapKit
 @testable import GeofenceArea
 
 class GeofenceAreaUnitTests: XCTestCase {
-    var sut: GeofenceAreaPresenter!
-
+    var sut: IGeofenceAreaPresenter!
+    
     override func setUp() {
         super.setUp()
         
         let service = GeofenceAreaService()
         sut = GeofenceAreaPresenter(service: service)
     }
-
+    
     func testGetGeofenceWhenNoData() {
         let model = sut.getGeofence()
         XCTAssertNil(model)
@@ -45,6 +45,17 @@ class GeofenceAreaUnitTests: XCTestCase {
         
         XCTAssertNotEqual(oldModel.wifiName, newModel?.wifiName)
         XCTAssertNotEqual(oldModel.radius, newModel?.radius)
+    }
+    
+    func testCheckNoUpdateViewGeofence() {
+        let isNeedUpdateView = sut.checkUpdateGeofenceStatus()
+        XCTAssertFalse(isNeedUpdateView)
+    }
+    
+    func testCheckUpdateViewGeofence() {
+        saveTestDemoGeofence()
+        let isNeedUpdateView = sut.checkUpdateGeofenceStatus()
+        XCTAssertTrue(isNeedUpdateView)
     }
     
     func testIsMatchWifiName() {
@@ -88,6 +99,11 @@ class GeofenceAreaUnitTests: XCTestCase {
         XCTAssertTrue(isInside)
     }
     
+    func testGetWifiSsidWhenOpenApp() {
+        let wifiSSid = sut.getWiFiSsid()
+        XCTAssertNil(wifiSSid)
+    }
+    
     override func tearDown() {
         resetUserDefaults()
         sut = nil
@@ -97,23 +113,23 @@ class GeofenceAreaUnitTests: XCTestCase {
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
-
+    
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
-
+    
     func testExample() throws {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
-
+    
     func testPerformanceExample() throws {
         // This is an example of a performance test case.
         measure {
             // Put the code you want to measure the time of here.
         }
     }
-
+    
 }
 
 // MARK: - Init
@@ -124,15 +140,12 @@ extension GeofenceAreaUnitTests {
         return geofence
     }
     
+    @discardableResult
     private func saveTestDemoGeofence() -> GeofenceModel {
         let service = GeofenceAreaService()
         let geofence = createNewGeofence()
         service.updateGeofence(geofence)
         return geofence
-    }
-    
-    private func removeGeofence() {
-        resetUserDefaults()
     }
     
     private func resetUserDefaults() {

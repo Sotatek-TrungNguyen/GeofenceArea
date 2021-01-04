@@ -15,7 +15,7 @@ public protocol IGeofenceAreaPresenter {
     
     func getGeofence() -> GeofenceModel?
     func updateGeofence(_ geofence: GeofenceModel?)
-    func checkUpdateGeofenceStatus()
+    @discardableResult func checkUpdateGeofenceStatus() -> Bool
     
     func isInsideGeofenceCircle(currentLocation: CLLocationCoordinate2D, geofence: GeofenceModel?) -> Bool
     func isMatchWifiName(geofence: GeofenceModel, currentWifiName: String) -> Bool
@@ -33,7 +33,6 @@ public class GeofenceAreaPresenter: IGeofenceAreaPresenter {
     
     public func onViewDidLoad(view: IGeofenceAreaView) {
         self.view = view
-        
         // Remove old geofence
         self.updateGeofence(nil)
     }
@@ -48,9 +47,11 @@ public class GeofenceAreaPresenter: IGeofenceAreaPresenter {
         self.view?.updateGeofenceStatus(geofence: geofence)
     }
     
-    public func checkUpdateGeofenceStatus() {
-        guard let geofence = service.getGeofence() else { return }
+    @discardableResult
+    public func checkUpdateGeofenceStatus() -> Bool {
+        guard let geofence = service.getGeofence() else { return false}
         self.view?.updateGeofenceStatus(geofence: geofence)
+        return true
     }
     
     public func isInsideGeofenceCircle(currentLocation: CLLocationCoordinate2D, geofence: GeofenceModel?) -> Bool {
