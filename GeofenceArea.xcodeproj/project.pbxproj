@@ -10,6 +10,7 @@
 		103BE8E7259CDD5600487748 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103BE8E6259CDD5600487748 /* Reachability.swift */; };
 		10568085259DC2E1008FB888 /* EditGeofencePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10568084259DC2E1008FB888 /* EditGeofencePresenter.swift */; };
 		1056808E259DD699008FB888 /* GeofenceAreaUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1056808D259DD699008FB888 /* GeofenceAreaUnitTests.swift */; };
+		1076097E25A2B93F0025B762 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1076097D25A2B93F0025B762 /* String+Extensions.swift */; };
 		109B60F2259D733100317C14 /* AppPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109B60F1259D733100317C14 /* AppPreferences.swift */; };
 		109B60F4259D7CCE00317C14 /* GeofenceAreaPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109B60F3259D7CCE00317C14 /* GeofenceAreaPresenter.swift */; };
 		109B60F6259D8B6400317C14 /* GeofenceAreaService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109B60F5259D8B6400317C14 /* GeofenceAreaService.swift */; };
@@ -45,6 +46,7 @@
 		1056808B259DD699008FB888 /* GeofenceAreaUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GeofenceAreaUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1056808D259DD699008FB888 /* GeofenceAreaUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeofenceAreaUnitTests.swift; sourceTree = "<group>"; };
 		1056808F259DD699008FB888 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1076097D25A2B93F0025B762 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		109B60F1259D733100317C14 /* AppPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPreferences.swift; sourceTree = "<group>"; };
 		109B60F3259D7CCE00317C14 /* GeofenceAreaPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeofenceAreaPresenter.swift; sourceTree = "<group>"; };
 		109B60F5259D8B6400317C14 /* GeofenceAreaService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeofenceAreaService.swift; sourceTree = "<group>"; };
@@ -213,6 +215,7 @@
 			children = (
 				10BD19C0259C64AC0042B1AF /* MapView+Extensions.swift */,
 				10BD19C8259C6F7B0042B1AF /* UIViewController+Extensions.swift */,
+				1076097D25A2B93F0025B762 /* String+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -337,6 +340,7 @@
 				10BD19CE259C961F0042B1AF /* GeofenceModel.swift in Sources */,
 				109B60F2259D733100317C14 /* AppPreferences.swift in Sources */,
 				10568085259DC2E1008FB888 /* EditGeofencePresenter.swift in Sources */,
+				1076097E25A2B93F0025B762 /* String+Extensions.swift in Sources */,
 				10EB83EC259C243900B81E07 /* GeofenceAreaViewController.swift in Sources */,
 				103BE8E7259CDD5600487748 /* Reachability.swift in Sources */,
 				10EB83EF259C2BE000B81E07 /* Constant.swift in Sources */,

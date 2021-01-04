@@ -15,9 +15,9 @@ class GeofenceAreaUnitTests: XCTestCase {
 
     override func setUp() {
         super.setUp()
-        let vc = GeofenceAreaViewController()
+        
         let service = GeofenceAreaService()
-        sut = GeofenceAreaPresenter(view: vc, service: service)
+        sut = GeofenceAreaPresenter(service: service)
     }
 
     func testGetGeofenceWhenNoData() {
@@ -38,7 +38,7 @@ class GeofenceAreaUnitTests: XCTestCase {
         let service = GeofenceAreaService()
         // Setup data
         let oldModel = saveTestDemoGeofence()
-        
+        // Test update
         let geofence2 = createNewGeofence(radius: 200.0, wifiName: "blala")
         sut.updateGeofence(geofence2)
         let newModel = service.getGeofence()
@@ -48,6 +48,7 @@ class GeofenceAreaUnitTests: XCTestCase {
     }
     
     func testIsMatchWifiName() {
+        // Setup data
         let service = GeofenceAreaService()
         let geofence = createNewGeofence(wifiName: "SotaTek")
         service.updateGeofence(geofence)
@@ -134,7 +135,7 @@ extension GeofenceAreaUnitTests {
         resetUserDefaults()
     }
     
-    public func resetUserDefaults() {
+    private func resetUserDefaults() {
         let userDefaults = UserDefaults.standard
         let dictionary = userDefaults.dictionaryRepresentation()
         dictionary.keys.forEach { key in
