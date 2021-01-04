@@ -55,7 +55,10 @@ extension GANavigationViewController: UINavigationControllerDelegate {
             let backImage = UIImage(named: "ic_arrow_back")?.withInsets(UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 0))
             currentVC.navigationController?.navigationBar.backIndicatorImage = backImage
             currentVC.navigationController?.navigationBar.backIndicatorTransitionMaskImage = backImage
-            currentVC.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+            let backButton = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+            backButton.isAccessibilityElement = true
+            backButton.accessibilityLabel = "backButtonNavigation"
+            currentVC.navigationItem.backBarButtonItem = backButton
         }
     }
 }
