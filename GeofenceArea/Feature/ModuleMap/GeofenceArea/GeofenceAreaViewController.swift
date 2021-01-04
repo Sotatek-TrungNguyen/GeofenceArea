@@ -184,9 +184,12 @@ extension GeofenceAreaViewController: IGeofenceAreaView {
     func updateGeofenceStatus(geofence: GeofenceModel?) {
         guard let geofence = geofence, let presenter = presenter else { return }
         let currentCoordinate = mapView.userLocation.coordinate
-        let currentWifiName = presenter.getWiFiSsid() ?? ""
         
-        let isInsideArea = presenter.isInsideGeofenceCircle(currentLocation: currentCoordinate, geofence: geofence) || presenter.isMatchWifiName(geofence: geofence, currentWifiName: currentWifiName)
+        let currentWifiName = presenter.getWiFiSsid() ?? ""
+        let isInsideCircle = presenter.isInsideGeofenceCircle(currentLocation: currentCoordinate, geofence: geofence)
+        let isMatchWifi = presenter.isMatchWifiName(geofence: geofence, currentWifiName: currentWifiName)
+        
+        let isInsideArea = isInsideCircle || isMatchWifi
         statusLabel.text = isInsideArea ? "Inside" : "Outside"
         statusLabel.textColor = isInsideArea ? .blue : .red
     }

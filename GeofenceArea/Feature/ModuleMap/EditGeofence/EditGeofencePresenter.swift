@@ -24,8 +24,6 @@ public class EditGeofencePresenter: IEditGeofencePresenter {
     
     public func onViewDidLoad(view: IEditGeofenceView) {
         self.view = view
-        // Update UI when have geofence before
-        self.loadGeofence()
     }
     
     public func loadGeofence() {

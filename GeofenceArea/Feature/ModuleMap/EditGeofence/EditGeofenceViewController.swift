@@ -44,9 +44,17 @@ class EditGeofenceViewController: UIViewController {
         super.viewDidLoad()
         
         presenter?.onViewDidLoad(view: self)
+        setupUI()
         setupNavigation()
         hideKeyboardWhenTappedAround()
         setupLocation()
+        
+        presenter?.loadGeofence()
+    }
+    
+    private func setupUI() {
+        radiusTextField.delegate = self
+        wifiNameTextField.delegate = self
     }
     
     private func setupNavigation() {
@@ -54,9 +62,6 @@ class EditGeofenceViewController: UIViewController {
         let btnMyLocation = UIBarButtonItem(image: UIImage(named: "my_location_white"), style: .plain, target: self, action: #selector(tappedMyLocation))
         let btnDone = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(tappedDone))
         navigationItem.rightBarButtonItems = [btnDone, btnMyLocation]
-        
-        radiusTextField.delegate = self
-        wifiNameTextField.delegate = self
     }
     
     private func setupLocation() {
@@ -98,7 +103,7 @@ extension EditGeofenceViewController: UITextFieldDelegate {
     
     @objc func tappedDone() {
         dismissKeyboard()
-        guard let wifiName = wifiNameTextField.text, let radiusText = radiusTextField.text, let radius = Double(radiusText) else {
+        guard let wifiName = wifiNameTextField.text?.trimSpace(), let radiusText = radiusTextField.text, let radius = Double(radiusText) else {
             self.presentAlert(title: "Error", message: "Please input valid values!")
             return
         }
