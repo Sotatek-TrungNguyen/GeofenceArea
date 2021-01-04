@@ -30,7 +30,6 @@ xcuserdata
 *.xccheckout
 *.xcscmblueprint
 *.xcuserstate
-*.xcscheme
 .DS_Store
 
 ## Obj-C/Swift specific

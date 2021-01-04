@@ -15,7 +15,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var reachability: Reachability?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        application.setupTheme()
         window = UIWindow(frame: UIScreen.main.bounds)
         App.shared.switchRoot(type: .mapview)
         return true
@@ -34,10 +33,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 }
 
 extension UIApplication {
-    
-    func setupTheme() {
-        
-    }
     
     func setupReachability() -> Reachability {
         let reachability = try! Reachability()
