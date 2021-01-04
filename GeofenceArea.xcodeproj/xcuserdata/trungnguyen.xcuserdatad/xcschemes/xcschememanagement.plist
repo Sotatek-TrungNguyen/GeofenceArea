@@ -9,6 +9,11 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>GeofenceAreaUITests.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
 		<key>GeofenceAreaUnitTests.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
@@ -18,6 +23,11 @@
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>1056808A259DD699008FB888</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1076098225A2C6470025B762</key>
 		<dict>
 			<key>primary</key>
 			<true/>

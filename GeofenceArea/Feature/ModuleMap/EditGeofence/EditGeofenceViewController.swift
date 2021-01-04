@@ -61,6 +61,8 @@ class EditGeofenceViewController: UIViewController {
         self.title = "Edit Geofence"
         let btnMyLocation = UIBarButtonItem(image: UIImage(named: "my_location_white"), style: .plain, target: self, action: #selector(tappedMyLocation))
         let btnDone = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(tappedDone))
+        btnDone.isAccessibilityElement = true
+        btnDone.accessibilityLabel = "Done"
         navigationItem.rightBarButtonItems = [btnDone, btnMyLocation]
     }
     

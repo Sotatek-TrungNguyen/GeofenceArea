@@ -62,7 +62,11 @@ class GeofenceAreaViewController: UIViewController {
     private func setupNavigation() {
         self.title = "Geofence Area"
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "my_location_white"), style: .plain, target: self, action: #selector(tappedMyLocation))
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "edit"), style: .plain, target: self, action: #selector(tappedEdit))
+        
+        let editButton = UIBarButtonItem(image: UIImage(named: "edit"), style: .plain, target: self, action: #selector(tappedEdit))
+        editButton.isAccessibilityElement = true
+        editButton.accessibilityLabel = "EditButton"
+        navigationItem.rightBarButtonItem = editButton
     }
     
     private func setupLocation() {
@@ -175,7 +179,7 @@ extension GeofenceAreaViewController: IGeofenceAreaView {
     func updateGeofenceInMap(geofence: GeofenceModel?) {
         guard let geofence = geofence else { return }
         
-        wifiNameLabel.text = "Wifi connect:" + "\(geofence.wifiName)"
+        wifiNameLabel.text = "Wifi Name to connect:" + "\(geofence.wifiName)"
         mapView.removeAllGeofences()
         mapView.addGeofence(geofence: geofence)
         startMonitoring(geofence: geofence)
